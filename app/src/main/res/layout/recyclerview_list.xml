@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/listImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/profileimg"
+            app:layout_constraintTop_toTopOf="@+id/helloText"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/listName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dipan Karmakar"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@+id/listImage"
+            app:layout_constraintLeft_toRightOf="@id/listImage"/>
+
+        <TextView
+            android:id="@+id/listAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dipan Karmakar"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/listName"
+            app:layout_constraintLeft_toLeftOf="@+id/listName"
+            app:layout_constraintBottom_toBottomOf="@+id/listImage"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
