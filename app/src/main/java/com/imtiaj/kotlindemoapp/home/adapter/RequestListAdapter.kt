@@ -1,4 +1,4 @@
-package com.imtiaj.kotlindemoapp.adapter
+package com.imtiaj.kotlindemoapp.home.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.*
 import com.imtiaj.kotlindemoapp.R
-import com.imtiaj.kotlindemoapp.model.RequestList
+import com.imtiaj.kotlindemoapp.home.model.RequestList
 
 class RequestListAdapter(val userList:ArrayList<RequestList>): Adapter<RequestListAdapter.ViewHolder>() {
 
