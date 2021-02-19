@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Today"
+        android:textSize="18sp"
+        android:textColor="@color/decline_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardElevation="1dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#E1E0E0"
+        app:layout_constraintTop_toBottomOf="@+id/listTitle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/totalRequest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Request"
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"
+                android:textStyle="normal"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <TextView
+                android:id="@+id/totalRequesValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/totalRequest"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/totalEarning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Earning"
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"
+                android:layout_marginTop="12dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@id/totalRequest"
+                app:layout_constraintLeft_toLeftOf="@+id/totalRequest"/>
+
+            <TextView
+                android:id="@+id/totalEarningValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 15k"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/totalEarning"
+                app:layout_constraintRight_toRightOf="@+id/totalRequesValue"/>
+
+            <TextView
+                android:id="@+id/totalDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Km"
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"
+                android:layout_marginTop="12dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@id/totalEarning"
+                app:layout_constraintLeft_toLeftOf="@+id/totalEarning"/>
+
+            <TextView
+                android:id="@+id/totaldistanceValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20k"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/totalDistance"
+                app:layout_constraintRight_toRightOf="@+id/totalEarningValue"/>
+
+            <TextView
+                android:id="@+id/satisfiedCustomer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Satisfied Customer"
+                android:textSize="14sp"
+                android:textColor="#5F5F5F"
+                android:layout_marginTop="16dp"
+                android:textStyle="normal"
+                app:layout_constraintTop_toBottomOf="@id/totalDistance"
+                app:layout_constraintLeft_toLeftOf="@+id/totalDistance"/>
+
+            <TextView
+                android:id="@+id/satisfiedCustomerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="189"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="@+id/satisfiedCustomer"
+                app:layout_constraintRight_toRightOf="@+id/totaldistanceValue"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
