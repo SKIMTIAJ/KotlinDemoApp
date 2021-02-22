@@ -48,6 +48,7 @@
         android:layout_height="150dp"
         app:hintEnabled="false"
         android:layout_marginTop="6dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:background="@drawable/sendmessage_background"
         app:layout_constraintTop_toBottomOf="@+id/sendMessage"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -55,8 +56,13 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:padding="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:overScrollMode="always"
             android:background="@drawable/sendmessage_background"/>
 
     </com.google.android.material.textfield.TextInputLayout>

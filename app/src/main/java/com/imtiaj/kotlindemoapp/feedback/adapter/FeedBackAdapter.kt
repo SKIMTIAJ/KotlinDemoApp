@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.imtiaj.kotlindemoapp.R
+import com.imtiaj.kotlindemoapp.feedback.ClickListener
 import com.imtiaj.kotlindemoapp.feedback.model.FeedBackList
 
-class FeedBackAdapter(val feedbackList:ArrayList<FeedBackList>, val context: Context): RecyclerView.Adapter<FeedBackAdapter.ViewHolder>(){
+class FeedBackAdapter(val feedbackList:ArrayList<FeedBackList>, val context: Context, val onclickListner:ClickListener): RecyclerView.Adapter<FeedBackAdapter.ViewHolder>(){
 
     val recycledViewPool = RecyclerView.RecycledViewPool()
 
@@ -51,10 +52,16 @@ class FeedBackAdapter(val feedbackList:ArrayList<FeedBackList>, val context: Con
         holder.recyclerView.adapter = adapter
 
         holder.replyButton.setOnClickListener {
-            holder.recyclerView.visibility = View.VISIBLE
+           // holder.recyclerView.visibility = View.VISIBLE
+            onclickListner.onCellClickListener()
         }
 
         holder.likeButton.setOnClickListener{
+            holder.likeButton.setImageResource(R.drawable.like)
+        }
+
+        if (feedbackList.get(position).feedbackDate == "13/05/2020"){
+            holder.recyclerView.visibility = View.VISIBLE
             holder.likeButton.setImageResource(R.drawable.like)
         }
 

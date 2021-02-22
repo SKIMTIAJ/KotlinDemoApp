@@ -8,6 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.textfield.TextInputLayout
 import com.imtiaj.kotlindemoapp.R
+import com.imtiaj.kotlindemoapp.feedback.FeedBackActivity
 import com.imtiaj.kotlindemoapp.totalvisited.TotalVisitedActivity
 import kotlinx.android.synthetic.main.activity_profile.*
 
@@ -22,7 +23,11 @@ class ProfileActivity : AppCompatActivity() {
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet)
 
         saveButton.setOnClickListener {
-            val intent = Intent(applicationContext,TotalVisitedActivity::class.java)
+           /* val intent = Intent(applicationContext,TotalVisitedActivity::class.java)
+            startActivity(intent)*/
+        }
+        profileHeader.setOnClickListener {
+            val intent = Intent(applicationContext,FeedBackActivity::class.java)
             startActivity(intent)
         }
 
