@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".statics.StaticsActivity">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="30dp"
+        android:layout_height="24dp"
+        android:src="@drawable/leftarrow"
+        android:scaleType="centerInside"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.5"
+        android:orientation="vertical"/>
+
+    <TextView
+        android:id="@+id/pageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statictics"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@+id/backButton"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        app:layout_constraintRight_toRightOf="@id/guideline"/>
+
+
+    <TextView
+        android:id="@+id/pageCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="For Booking Request"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        android:textFontWeight="700"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toBottomOf="@id/backButton"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/oneMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1month"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/call_button"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintTop_toBottomOf="@id/pageCaption"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/threeMonth"/>
+
+    <TextView
+        android:id="@+id/threeMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3month"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/call_button"
+        android:backgroundTint="@color/call_color"
+        app:layout_constraintTop_toTopOf="@+id/oneMonth"
+        app:layout_constraintLeft_toRightOf="@+id/oneMonth"
+        app:layout_constraintRight_toLeftOf="@+id/sixthMonth"/>
+
+    <TextView
+        android:id="@+id/sixthMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6month"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/call_button"
+        app:layout_constraintTop_toTopOf="@+id/threeMonth"
+        app:layout_constraintLeft_toRightOf="@+id/threeMonth"
+        app:layout_constraintRight_toLeftOf="@+id/oneYear"/>
+
+    <TextView
+        android:id="@+id/oneYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1year"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/call_button"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toTopOf="@+id/sixthMonth"
+        app:layout_constraintLeft_toRightOf="@+id/sixthMonth"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/graph"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/oneMonth"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/detailsCaption"/>
+
+    <TextView
+        android:id="@+id/detailsCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details:"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintTop_toBottomOf="@id/graph"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/totalBooking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Booking"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textFontWeight="700"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/detailsCaption"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/totalBookingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="23K"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="normal"
+        android:textFontWeight="700"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintTop_toTopOf="@+id/totalBooking"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

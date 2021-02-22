@@ -160,7 +160,9 @@
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <!-- </androidx.core.widget.NestedScrollView>-->
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
@@ -185,7 +187,7 @@
                 <!--<include layout="@layout/nav_header_main" />-->
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/nav_drawer_recycler_view"
+                    android:id="@+id/navRecyclerView"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:background="@android:color/white"
