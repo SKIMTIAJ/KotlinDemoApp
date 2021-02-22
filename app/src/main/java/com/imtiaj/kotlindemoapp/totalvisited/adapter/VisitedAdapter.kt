@@ -1,6 +1,7 @@
 package com.imtiaj.kotlindemoapp.totalvisited.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.imtiaj.kotlindemoapp.R
+import com.imtiaj.kotlindemoapp.statics.StaticsActivity
 import com.imtiaj.kotlindemoapp.totalvisited.model.VisitedList
 
 class VisitedAdapter(val context:Context,val userList:ArrayList<VisitedList>):RecyclerView.Adapter<VisitedAdapter.ViewHolder>() {
@@ -48,6 +50,12 @@ class VisitedAdapter(val context:Context,val userList:ArrayList<VisitedList>):Re
             holder.date.setTextColor(ContextCompat.getColor(context,R.color.light_green))
             holder.parentView.backgroundTintList = ContextCompat.getColorStateList(context, R.color.white)
         }
+
+        holder.parentView.setOnClickListener{
+            val intent = Intent(context,StaticsActivity::class.java)
+            context.startActivity(intent)
+        }
+
     }
 }
 

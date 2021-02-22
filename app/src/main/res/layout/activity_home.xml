@@ -113,7 +113,7 @@
                     app:layout_constraintLeft_toLeftOf="@+id/helloText"/>
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/notificationImage"
+                    android:id="@+id/profileImage"
                     android:layout_width="48dp"
                     android:layout_height="48dp"
                     android:layout_marginRight="24dp"

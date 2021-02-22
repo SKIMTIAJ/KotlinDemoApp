@@ -9,6 +9,8 @@ import com.imtiaj.kotlindemoapp.R
 import com.imtiaj.kotlindemoapp.booking.BookingDetailsActivity
 import com.imtiaj.kotlindemoapp.home.adapter.RequestListAdapter
 import com.imtiaj.kotlindemoapp.home.model.RequestList
+import com.imtiaj.kotlindemoapp.notification.NotificationActivity
+import com.imtiaj.kotlindemoapp.profile.ProfileActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -28,11 +30,14 @@ class HomeActivity : AppCompatActivity() {
         usersItem.add(RequestList("Dipan Karmakar", "Pick addreass wiil be here"))
 
 
-        val adapter = RequestListAdapter(usersItem)
+        val adapter = RequestListAdapter(usersItem,applicationContext)
         recyclerView.adapter = adapter
 
         notificationIcon.setOnClickListener{
-            startActivity(Intent(this,BookingDetailsActivity::class.java))
+            startActivity(Intent(this,NotificationActivity::class.java))
+        }
+        profileImage.setOnClickListener{
+            startActivity(Intent(this,ProfileActivity::class.java))
         }
 
     }

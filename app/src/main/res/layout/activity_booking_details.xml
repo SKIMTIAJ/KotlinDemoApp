@@ -355,6 +355,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <View
+        android:id="@+id/bottomSheetBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="#9999"/>
+
     <include layout="@layout/decline_bottomsheet" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
