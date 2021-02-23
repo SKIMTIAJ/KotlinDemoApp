@@ -13,8 +13,8 @@
 
         <ImageView
             android:id="@+id/backButton"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@drawable/leftarrow"
             android:scaleType="centerCrop"
             android:layout_marginTop="16dp"
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="24dp"
-            android:background="#F4F4F4"
+            android:background="@color/activity_backgroundcolor"
             android:layout_marginTop="12dp"
             android:layout_marginBottom="12dp"
             app:layout_constraintTop_toBottomOf="@+id/pageTitle"
@@ -131,7 +131,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Pickup Location Ranaghat and full Address"
-                android:textColor="@color/black"
+                android:textColor="#929292"
                 android:textSize="15sp"
                 android:drawableLeft="@drawable/ic_pin"
                 android:layout_marginTop="10dp"
